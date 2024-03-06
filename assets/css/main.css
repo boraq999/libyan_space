@@ -1,5 +1,5 @@
 .header {
-  padding: 0;
+  padding: 0 15px;
   background: rgba(0, 0, 0, 0.242);
   /* background: rgb(248, 247, 247); */
   top: 0;
@@ -82,13 +82,14 @@
   display: flex;
   position: fixed;
   width: 100%;
-  bottom: 0;
-  right: 0;
+  bottom: 0px;
+  left: 50%;
   z-index: 100;
+  transform: translateX(-50%);
 
   ul {
     width: 100%;
-    height: 50px;
+    /* height: 50px; */
     display: flex;
     justify-content: center;
     gap: 25px;
@@ -99,24 +100,31 @@
     padding-bottom: 10px;
     border-radius: 30px 30px 0 0;
 
+    a{
+      display: flex;
+      flex-direction: column-reverse;
+      font-size: 10px;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      gap: 0;
+
+      span{
+        padding: 0;
+        margin-top: -10px;
+        color: white;
+        text-transform: capitalize;
+      }
+    }
+
     .mobile_item {
       font-size: 17px;
       padding: 13px;
       border-radius: 20px;
       color: var(--my_lite);
-      /* transition: 3s; */
     }
 
-    .mobile_item.my_active,
-    .mobile_item:hover {
-      transition: 0.5s;
-      /* transition: 3s; */
-      transform: translateY(-15px);
-      padding: 13px;
-      background: var(--my_primary);
-      background: linear-gradient(var(--my_dark_1) -40%, var(--my_dark_3) 124%);
-      border: 3px solid var(--my_dark_3);
-    }
+
   }
 }
 
@@ -337,13 +345,13 @@ button:focus {
 }
 
 .my_slider-container .action-buttons .down-button {
-  transform: translateX(-100%);
+  transform: translateX(-0%) translateY(-100%) rotate(180deg);
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
 }
 
 .my_slider-container .action-buttons .up-button {
-  transform: translateY(-100%);
+  transform: translateY(0%) translateX(-100%) rotate(180deg);
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
 }
@@ -394,13 +402,13 @@ button:focus {
   }
 
   .my_slider-container .action-buttons .down-button {
-    transform: translateX(141%) rotate(-90deg);
+    transform: translateX(0%) rotate(90deg);
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
   }
 
   .my_slider-container .action-buttons .up-button {
-    transform: translateY(0%) rotate(-90deg);
+    transform: translateY(0%) translateX(140%) rotate(90deg);
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
   }

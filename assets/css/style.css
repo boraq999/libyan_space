@@ -118,7 +118,17 @@ li {
     font-family: "Cairo", sans-serif;
     font-size: 64px;
     font-weight: 300;
+    font-weight: bold;
     Letter-spacing: -0.5px;
+}
+
+.my_border{
+    color: var(--my_primary);
+    border-bottom: 2px solid var(--my_primary);
+    padding:0 20px 20px;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 @media (max-width:992px) {

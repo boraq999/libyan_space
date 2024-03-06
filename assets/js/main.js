@@ -26,11 +26,16 @@ const changeSlide = (direction) => {
     }
   }
 
-  slideRight.style.transform = `translateY(-${
-    activeSlideIndex * sliderHeight
-  }px)`;
-  slideLeft.style.transform = `translateY(${
-    activeSlideIndex * sliderHeight
-  }px)`;
+  slideRight.style.transform = `translateY(-${activeSlideIndex * sliderHeight
+    }px)`;
+  slideLeft.style.transform = `translateY(${activeSlideIndex * sliderHeight
+    }px)`;
 };
+
+
+
+// console.log(mobile_icon);
+
+let mobile_item = document.querySelectorAll('.mobile_item');
+
 

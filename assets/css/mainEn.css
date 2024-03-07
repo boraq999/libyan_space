@@ -2,12 +2,25 @@
   direction: ltr;
 }
 
-.title {
-  text-transform: capitalize ;
+.mobile_links li a button svg {
+  width: 50px !important;
+
 }
 
-.landing{
-  .info{
+.mobile_links li a button span {
+  border-radius: 0;
+  border-left: 8px solid #212529;
+  border-right: 0px;
+  width: calc(100% - 60px);
+  max-width: calc(100% - 60px);
+}
+
+.title {
+  text-transform: capitalize;
+}
+
+.landing {
+  .info {
     line-height: 1.5;
     text-shadow: 0 0 10px black;
   }

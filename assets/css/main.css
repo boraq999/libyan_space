@@ -78,57 +78,32 @@
   padding: 7px 25px;
 }
 
-.nav_mobile {
-  display: flex;
-  position: fixed;
+.mobile_links li a button {
   width: 100%;
-  bottom: 0px;
-  left: 50%;
-  z-index: 100;
-  transform: translateX(-50%);
-
-  ul {
-    width: 100%;
-    /* height: 50px; */
-    display: flex;
-    justify-content: center;
-    gap: 25px;
-    background: var(--my_primary);
-    background: linear-gradient(
-      45deg,
-      var(--my_dark_1) 48%,
-      var(--my_active) 159%
-    );
-    background: linear-gradient(0deg, var(--my_dark_1) 20%, var(--my_dark_2));
-    padding-top: 5px;
-    padding-bottom: 10px;
-    border-radius: 30px 30px 0 0;
-
-    a {
-      display: flex;
-      flex-direction: column-reverse;
-      font-size: 10px;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      gap: 0;
-
-      span {
-        padding: 0;
-        margin-top: -10px;
-        color: white;
-        text-transform: capitalize;
-      }
-    }
-
-    .mobile_item {
-      font-size: 17px;
-      padding: 13px;
-      border-radius: 20px;
-      color: var(--my_lite);
-    }
-  }
+  background: #00526422;
+  border-radius: 8px;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 0px;
+  padding: 0 8px 0 5px;
 }
+
+.mobile_links li a svg {
+  width: 50px !important;
+  color: var(--my_primary);
+}
+
+.mobile_links li a span {
+  border-right: 8px solid #212529;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 10px;
+  width: calc(100% - 50px);
+  max-width: calc(100% - 50px);
+}
+
 
 /* ============================================ start landing */
 .landing {
@@ -242,14 +217,12 @@
 
 .my_slider {
   background: linear-gradient(45deg, var(--my_dark_2), var(--my_dark_2));
-  background-image: linear-gradient(
-    to right top,
-    #bffbff,
-    #91ced6,
-    #65a2af,
-    #397888,
-    #005164
-  );
+  background-image: linear-gradient(to right top,
+      #bffbff,
+      #91ced6,
+      #65a2af,
+      #397888,
+      #005164);
   background: #ddd;
   padding-top: 100px;
   padding-bottom: 50px;
@@ -285,7 +258,7 @@
   transition: transform 0.5s ease-in-out;
 }
 
-.left-slide > div {
+.left-slide>div {
   height: 100%;
   width: 100%;
   display: flex;
@@ -315,7 +288,7 @@
   transition: transform 0.5s ease-in-out;
 }
 
-.right-slide > div {
+.right-slide>div {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -373,7 +346,7 @@ button:focus {
     width: 100%;
   }
 
-  .my_slider-container .left-slide > div {
+  .my_slider-container .left-slide>div {
     background-color: transparent !important;
     /* backdrop-filter: blur(5px); */
     padding-right: 10px;
@@ -388,7 +361,7 @@ button:focus {
     z-index: -1;
   }
 
-  .my_slider-container .right-slide > div::after {
+  .my_slider-container .right-slide>div::after {
     content: "";
     position: absolute;
     top: 0;
@@ -470,14 +443,12 @@ button:focus {
   bottom: 0%;
   right: 0%;
   left: 0%;
-  background-image: linear-gradient(
-    to top,
-    rgba(159, 213, 93, 0.3),
-    rgba(162, 219, 81, 0.3),
-    rgba(164, 224, 67, 0.2),
-    rgba(164, 230, 49, 0.1),
-    #a6eb1200
-  );
+  background-image: linear-gradient(to top,
+      rgba(159, 213, 93, 0.3),
+      rgba(162, 219, 81, 0.3),
+      rgba(164, 224, 67, 0.2),
+      rgba(164, 230, 49, 0.1),
+      #a6eb1200);
 }
 
 .cat .cat-box img {
@@ -528,7 +499,7 @@ button:focus {
   height: 100%;
   background: rgba(0, 0, 0, 0.551);
   background: rgba(0, 0, 0, 0.798);
-  
+
 }
 
 .principle::after {
@@ -540,12 +511,10 @@ button:focus {
   height: 100%;
   background: #eee;
   background: linear-gradient(104deg, var(--my_dark_2) 20%, var(--my_dark_1));
-  clip-path: polygon(
-    40% 100%,
-    60% calc(100% - 55px),
-    100% calc(100% - 55px),
-    100% 100%
-  );
+  clip-path: polygon(40% 100%,
+      60% calc(100% - 55px),
+      100% calc(100% - 55px),
+      100% 100%);
 }
 
 .principle .container {
@@ -639,7 +608,7 @@ button:focus {
 
 .clints .title,
 .partnership .title {
-  border-bottom-color:var(--my_dark_2);
+  border-bottom-color: var(--my_dark_2);
   color: var(--my_dark_2);
 }
 
@@ -771,12 +740,10 @@ button:focus {
   height: 100%;
   background: #eee;
   /* background: linear-gradient(118deg, var(--my_dark_2) 20%, var(--my_dark_1)); */
-  clip-path: polygon(
-    40% 100%,
-    60% calc(100% - 55px),
-    100% calc(100% - 55px),
-    100% 100%
-  );
+  clip-path: polygon(40% 100%,
+      60% calc(100% - 55px),
+      100% calc(100% - 55px),
+      100% 100%);
 }
 
 .contact-us::after {
@@ -879,10 +846,11 @@ button:focus {
   text-align: center;
 }
 
-.footer .sec-one{
+.footer .sec-one {
   display: flex;
   gap: 30px;
-  a{
+
+  a {
     display: grid;
     place-items: center;
     width: 50px;
@@ -891,15 +859,16 @@ button:focus {
     border: 2px solid var(--my_active);
 
   }
-  svg{
+
+  svg {
     /* padding: 10px; */
     font-size: 20px;
     color: var(--my_active);
   }
 }
 
-.footer .sec-two{
-  ul{
+.footer .sec-two {
+  ul {
     display: flex;
     gap: 40px;
     align-items: center;
@@ -910,14 +879,17 @@ button:focus {
 
 .footer .sec-three {
   margin-top: 20px;
+
   .logo {
     height: 80px;
     margin-bottom: 10px;
   }
+
   img {
     height: 100%;
   }
-  .title{
+
+  .title {
     font-weight: bold;
   }
 }

@@ -396,6 +396,8 @@ button:focus {
 .cat {
   padding: 100px 0 0;
   position: relative;
+  border-bottom: 10px solid var(--my_active);
+
 }
 
 .cat::after {
@@ -426,7 +428,7 @@ button:focus {
 }
 
 .cat .cat-box {
-  height: 240px;
+  height: 300px;
   padding: 0%;
   position: relative;
   display: flex;
@@ -434,6 +436,23 @@ button:focus {
   align-items: end;
   box-shadow: 0 0 10px #9fd55dbd;
   overflow: hidden;
+  border-top: 10px solid var(--my_active);
+
+
+}
+
+@media (max-width:991px) {
+  .cat .cat-box {
+    height: 330px;
+
+  }
+}
+
+@media (max-width:576px) {
+  .cat .cat-box {
+    height: 350px;
+
+  }
 }
 
 .cat .cat-box::before {
@@ -468,14 +487,82 @@ button:focus {
   rotate: 5deg;
 }
 
+
+
 .cat .cat-title {
   z-index: 1;
   font-weight: bold;
   background-color: rgba(159, 213, 93, 0.8);
   color: var(--my_dark_1);
-  width: 95%;
+  background: var(--my_active);
+  color: var(--my_lite);
+
+  clip-path: polygon(0% 0%, 100% 0%, 100% 70%, 70% 70%, 55% 100%, 45% 100%, 30% 70%, 0% 70%);
+  width: 100%;
   text-align: center;
   padding: 10px 0;
+  display: flex;
+  gap: 0px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  flex-direction: column;
+
+
+}
+
+.cat .cat-title div {
+  border-radius: 10px;
+  border: solid 2px;
+  height: 30px;
+  width: 30px;
+  display: grid;
+  place-items: center;
+
+  /* background: var(); */
+}
+
+.cat .modal {
+  background: #00000074;
+  backdrop-filter: blur(10px);
+}
+
+.cat .modal-content {
+  background: #212529;
+  color: rgba(255, 255, 255, 0.54);
+  background: #212529;
+  color: var(--my_dark_3);
+}
+
+.cat .modal-content h2 {
+  color: var(--my_lite);
+  color: var(--my_primary);
+  color: var(--my_active);
+}
+
+.cat .modal-body ul {
+  display: grid;
+  gap: 10px;
+}
+
+.cat .modal-body ul li {
+  background: #eee;
+  background: #1d2b31;
+  padding: 10px;
+  border-radius: 7px;
+  transition: .5s;
+}
+
+.cat .modal-body ul li:hover {
+  color: white;
+  background: #121b1f;
+}
+
+.cat .modal-content button {
+  background: #1d2b31;
+  border: 2px solid var(--my_active);
+  border-radius: 7px;
+  color: var(--my_active);
 }
 
 /* ===========================================  principle */
@@ -487,7 +574,6 @@ button:focus {
   background-size: cover;
   /* background-attachment: fixed; */
   position: relative;
-  border-top: 10px solid var(--my_active);
 }
 
 .principle::before {
@@ -674,7 +760,7 @@ button:focus {
 
 .partnership .slider .slide-track {
   display: flex;
-  width: calc(140px * 24);
+  width: calc(140px * 30);
   animation: scroll 30s linear alternate infinite;
   gap: 10px;
 }
@@ -689,7 +775,7 @@ button:focus {
   }
 
   100% {
-    transform: translateX(calc(140px * 12));
+    transform: translateX(calc(140px * 15));
   }
 }
 
